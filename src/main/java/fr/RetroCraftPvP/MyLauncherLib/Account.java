@@ -12,67 +12,9 @@ import fr.trxyy.alternative.alternative_api.GameFolder;
 
 public class Account {
 	
-	/*public static String login;
-	public static String password;
-	public static String cut;
-	public static String cut2;
-	public static int print;
-	public static int relayaccount;
-	public static boolean update = false;
-	public static GameAuth auth;
-	//public static String decrypted_class;*/
 	public static String chemein_skin_Head;
 	public static String chemein_skin_Body;
 	public static String chemein_skin_Structure;
-	
-	
-	/*public static int valueCounter;
-	public static boolean Setting_account;
-	public static ObservableList<String> listp;
-	public static String v1[];
-	public static String v2[];
-	public static String v3[];
-	public static String v4[];
-	public static String v5[];
-	public static Path path=Paths.get("src/test/account.yml");
-
-	/*public static void profile(Pane root, GameEngine engine , GameFolder gf, String login) throws NoSuchAlgorithmException, NoSuchPaddingException {
-		try {
-				List<String>lignes = Files.readAllLines(path);
-				for (String ligne : lignes) {
-					System.out.println(ligne);
-				}
-				byte[] Mbp=lignes.get(0).getBytes();
-				password=new String(Mbp,Charset.defaultCharset());
-
-			
-			if(relayaccount == 1) {
-				if(login.length() < 3) {
-					new LauncherAlert("Connexion échouée", "La case du speudo doit contenir plus de 3 carateres.");
-				}
-				else if(login.length() > 3 && password.isEmpty()) {
-					new LauncherAlert("Connexion échouée", "impossible de se connecter car le compte n'existe pas");
-				}
-				else if(login.length() > 3 && !password.isEmpty()) {
-					GameAuth authp = new GameAuth(login, password, AccountType.MICROSOFT);
-					if (authp.isLogged()) {
-						update = true;
-						auth = authp;
-					}
-					else {
-						new LauncherAlert("Connexion échouée", "Identifiants incorrects.");
-					}
-				}
-				else {
-					new LauncherAlert("Connexion échouée", "La connexion a échouée.");
-				}
-			}
-			
-			//reader.close();
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
-	}*/
 	
 	public static void Download_Skin_head(GameFolder gf,String name) {
 		String link = "https://minotar.net/helm/" + name + "/100.png";

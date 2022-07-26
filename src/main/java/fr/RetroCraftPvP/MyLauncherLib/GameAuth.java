@@ -56,12 +56,12 @@ public class GameAuth {
 	public GameAuth(String Speudo, String url,String u,String p,String db,GameFolder gf, AccountType type) {
 		this.url=url;this.u=u;this.p=p;this.db=db;
 		AuthConstants.displayCopyrights();
-		if (type.equals(AccountType.RetrocraftPvP)) {
-			this.gf=gf;this.connectRetrocraftPvP(url,u,p,db,Speudo);
+		if (type.equals(AccountType.CUSTOMIZE)) {
+			this.gf=gf;this.connectCustom(url,u,p,db,Speudo);
 		}
 	}
 	
-	public void connectRetrocraftPvP(String url,String u,String p,String db,String Speudo) {
+	public void connectCustom(String url,String u,String p,String db,String Speudo) {
 		try {
 			Connection con=DriverManager.getConnection(url,u,p);@SuppressWarnings("unused")
 			String email="",pwd="",User="",UUID="",MinTken="";@SuppressWarnings("unused")
@@ -78,8 +78,7 @@ public class GameAuth {
 		}
 	}
 	
-	public void RetrocraftAuth(Pane root, final GameEngine engine, GameFolder gamefolder,File f) {
-		//this.gameEngine = engine;
+	public void Customizer(Pane root, final GameEngine engine, GameFolder gamefolder,File f) {
 		this.config = new LauncherConfig(engine);
 		this.config.loadConfiguration();
 		
@@ -152,7 +151,6 @@ public class GameAuth {
 					boolean test_file=f.exists();
 					if(test_file==true) {
 						config.updateValue("username", username);panel=true;
-						//new LauncherPanel(root, engine, gamefolder);
 					}
 				}catch(SQLException e) {
 					e.printStackTrace();
@@ -192,7 +190,6 @@ public class GameAuth {
 				loginButton.setVisible(false);
 				LoginLabel.setVisible(false);
 				LoginButtonb.setVisible(false);lg=true;
-				//new LauncherLogin(root, engine, gamefolder, f);
 			}
 		});
 	}

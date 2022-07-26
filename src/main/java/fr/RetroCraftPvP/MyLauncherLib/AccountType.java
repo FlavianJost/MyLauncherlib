@@ -5,6 +5,6 @@ package fr.RetroCraftPvP.MyLauncherLib;
  */
 public enum AccountType {
 
-	MOJANG, MICROSOFT, RetrocraftPvP, OFFLINE,
+	MOJANG, MICROSOFT, CUSTOMIZE, OFFLINE,
 
 }
