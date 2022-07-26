@@ -16,7 +16,7 @@ public class AppUpdater extends IScreen{
 	private String File="";
 	public String url,username,password;
 
-	public AppUpdater(int Launcher_version,String API_version,string db) {
+	public AppUpdater(int Launcher_version,String API_version,String db) {
 		try {
 			Connection con=DriverManager.getConnection(url,username,password);@SuppressWarnings("unused")
 			Statement statement=con.createStatement();
